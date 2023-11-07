@@ -1,0 +1,107 @@
+/* Header.module.css */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.logoContainer {
+    margin-right: 20px;
+}
+
+.headerLogo {
+    height: 50px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer; /* It's a good practice to show a pointer cursor for clickable items */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px; /* Adjust as needed */
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 25px; /* Adjust as needed */
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.menuItems a, .menuItems button {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menuItems a:hover, .menuItems button:hover {
+    background-color: #e6e6e6;
+}
+
+.menuItems a.active, .menuItems button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.open .menuItems {
+    display: flex;
+}
+
+/* Mobile view styles */
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menuItems {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f2f2f2;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .open .menuItems {
+        display: flex;
+    }
+
+    .menuItems a, .menuItems button {
+        text-align: center;
+        padding: 12px 20px;
+        width: 100%;
+        display: block;
+    }
+
+    /* Styles for transforming hamburger into a cross */
+    .open .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .open .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}

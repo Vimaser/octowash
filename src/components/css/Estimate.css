@@ -1,0 +1,93 @@
+.estimate-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .estimate-container div {
+    margin-bottom: 15px;
+  }
+  
+  .estimate-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .estimate-container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .estimate-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .estimate-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .estimate-container button:disabled {
+    background-color: #cccccc;
+    cursor: default;
+  }
+  
+  .estimate-container p {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Specific style for the acknowledgement paragraph */
+  div .acknowledgement {
+    color: red;
+  }
+
+  div .clean {
+    color: rgb(255, 255, 255);
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  /* Styles for alert messages */
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+  
+  .alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  
+  .background-image {
+    background-image: url('./tiles.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

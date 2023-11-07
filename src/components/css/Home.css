@@ -1,0 +1,190 @@
+/* Define color variables for easy theme management */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #ccc;
+
+    /* Dark mode colors */
+    --dark-background-color: #1a1a1a;
+    --dark-text-color: #f8f9fa;
+}
+
+/* Use the variables throughout the CSS */
+.home-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.hero-section {
+    background: url('./water.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--dark-text-color);
+    padding: 60px 0;
+    text-align: center;
+    /* Optionally, add a fallback static image for cases where the GIF cannot load */
+    background-image: linear-gradient(to bottom, rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), url('./water.gif');
+}
+
+.brand-image {
+    max-width: 300px; /* Adjust this value as needed */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-section, .services-section, .testimonials-section, .cta-section {
+    padding: 40px 0;
+}
+
+.service-item {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#contact h2 {
+    color: rgb(0, 94, 255);
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgb(6, 0, 187);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  #estimate h2 {
+    color: rgb(0, 94, 255);
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgb(6, 0, 187);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: var(--dark-text-color);
+    display: inline-block;
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    color: var(--dark-text-color);
+    background-color: var(--dark-background-color);
+}
+
+.skip-animation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000; /* Above the cleaning animation overlay */
+    padding: 10px;
+    background: var(--primary-color);
+    color: var(--dark-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cleaning-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999; /* Make sure it's on top */
+    background: url('./water.gif') no-repeat center center;
+    background-size: cover;
+    display: none; /* Initially hidden */
+}
+
+#cleaning-animation.active {
+    display: block; /* Show the animation when active */
+}
+
+#cleaning-animation.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5), rgba(238, 242, 243, 0.5), rgba(142, 158, 171, 0.5));
+    background-size: 400% 400%;
+    /* Chain animations: first the water effect, then the screen wipe */
+    /* animation: waterEffect 3s ease, screenWipe 4s ease 5s forwards;  *//* Start screenWipe after waterEffect ends */
+}
+
+@keyframes waterEffect {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes screenWipe {
+    0% {
+        left: 100%;
+        width: 100%;
+    }
+    50% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+        width: 100%;
+    }
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+    .home-container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .about-section, .services-section, .testimonials-section, .cta-section {
+        padding: 20px 0;
+    }
+
+    .service-item {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        margin-top: 15px;
+    }
+}
+
+/* If there are other specific styles or adjustments needed, they can be added here. */
