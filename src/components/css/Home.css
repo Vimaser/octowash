@@ -2,8 +2,8 @@
 :root {
     --primary-color: #007bff;
     --success-color: #28a745;
-    --text-color: #333;
-    --background-color: #fff;
+    --text-color: #ffffff;
+    --background-color: #1e98ef;
     --border-color: #ccc;
 
     /* Dark mode colors */
@@ -11,12 +11,27 @@
     --dark-text-color: #f8f9fa;
 }
 
+/* Improved text readability with text shadow */
+.home-container,
+.hero-section,
+.about-section,
+.services-section,
+.testimonials-section,
+.cta-section {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adjust color and blur radius as needed */
+}
+
+
 /* Use the variables throughout the CSS */
 .home-container {
     font-family: 'Arial', sans-serif;
     padding: 20px;
     color: var(--text-color);
     background-color: var(--background-color);
+    background-image: url('./uwbg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-section {
@@ -47,17 +62,17 @@
 }
 
 #contact h2 {
-    color: rgb(0, 94, 255);
+    color: rgb(255, 255, 255);
     font-weight: bold; 
-    text-shadow: 2px 2px 4px rgb(6, 0, 187);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-family: 'Arial', sans-serif;
     letter-spacing: 0.5px;
   }
 
   #estimate h2 {
-    color: rgb(0, 94, 255);
+    color: rgb(255, 255, 255);
     font-weight: bold; 
-    text-shadow: 2px 2px 4px rgb(6, 0, 187);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-family: 'Arial', sans-serif;
     letter-spacing: 0.5px;
   }
@@ -132,6 +147,13 @@
     /* Chain animations: first the water effect, then the screen wipe */
     /* animation: waterEffect 3s ease, screenWipe 4s ease 5s forwards;  *//* Start screenWipe after waterEffect ends */
 }
+
+.home-background-image {
+    background-image: url('./tiles.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 @keyframes waterEffect {
     0%, 100% {

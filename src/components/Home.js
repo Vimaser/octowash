@@ -24,6 +24,7 @@ function Home() {
   }, []); */
 
   return (
+    <div className="home-background-image">
     <div className={`home-container ${isDarkMode ? "dark-mode" : ""}`}>
       <section className="hero-section">
         <img src={octopus} alt="Octowash Logo" className="brand-image" />
@@ -102,7 +103,7 @@ function Home() {
           Get in Touch
         </RouterLink>
       </section>
-    </div>
+    </div></div>
   );
 }
 

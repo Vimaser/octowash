@@ -1,5 +1,27 @@
 /* Header.module.css */
+.customNav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.customLogoContainer {
+    margin-right: 20px; /* Consider using Bootstrap's spacing utilities */
+}
+
+.customHeaderLogo {
+    height: 50px; /* Consider using Bootstrap's image classes */
+}
+
+.customMenuItems {
+    /* Additional custom styles for your menu items that don't conflict with Bootstrap */
+}
+
+.customActiveMenuItem {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Custom CSS pre bootstrap. Keep! */
+/* 
 .nav {
     display: flex;
     justify-content: space-between;
@@ -20,16 +42,16 @@
 
 .hamburger {
     display: none;
-    cursor: pointer; /* It's a good practice to show a pointer cursor for clickable items */
+    cursor: pointer;
     flex-direction: column;
     justify-content: space-around;
-    height: 25px; /* Adjust as needed */
+    height: 25px;
 }
 
 .hamburger span {
     display: block;
     height: 3px;
-    width: 25px; /* Adjust as needed */
+    width: 25px;
     background-color: #333;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -62,10 +84,10 @@
 
 .open .menuItems {
     display: flex;
-}
+} */
 
 /* Mobile view styles */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -91,9 +113,9 @@
         width: 100%;
         display: block;
     }
-
+ */
     /* Styles for transforming hamburger into a cross */
-    .open .hamburger span:nth-child(1) {
+/*     .open .hamburger span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
@@ -103,5 +125,5 @@
 
     .open .hamburger span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
+    } */
+
